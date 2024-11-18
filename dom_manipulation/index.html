@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Box Models</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .flex-row {
+      display: flex;
+      width: 100%;
+      justify-content: space-around;
+    }
+
+    .flex-column {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      justify-content: space-around;
+    }
+
+    .coloured-div {
+      background-color: lightblue;
+      border: 5px solid red;
+      margin: 10px;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: calc(100% / 3);
+    }
+
+    #header {
+      margin: 10px;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <header id="header">
+    <h1>
+      Flexbox
+    </h1>
+    <div>
+      <button onclick="window.document.getElementById('flex1').remove()">
+        Remove flex row
+      </button>
+      <button onclick="window.document.getElementById('flex2').remove()">
+        Remove flex column
+      </button>
+      <button onclick="window.location.href = window.location.href">
+        Refresh
+      </button>
+    </div>
+  </header>
+
+  <div class="flex-row" id="flex1">
+    <div class="coloured-div">
+    </div>
+
+    <div class="coloured-div">
+    </div>
+
+    <div class="coloured-div">
+    </div>
+  </div>
+
+  <div class="flex-column" id="flex2">
+    <div class="coloured-div">
+    </div>
+
+    <div class="coloured-div">
+    </div>
+
+    <div class="coloured-div">
+    </div>
+  </div>
+
+</body>
+
+</html>
